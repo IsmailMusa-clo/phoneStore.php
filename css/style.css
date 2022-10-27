@@ -1,0 +1,572 @@
+/* Start globel */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  scroll-behavior: smooth;
+  box-sizing: border-box !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+@font-face {
+  font-family: Bold;
+  src: url(../fonts/);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* End globel */
+/* *********************** */
+
+/* Start body */
+
+/* Statr hedar */
+/* Start nav */
+nav {
+  background-color: #333;
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.4);
+}
+.container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.container .content a img {
+  width: 130px;
+  height: 75px;
+}
+
+.container .content ul {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  color: #d5d9db;
+}
+
+.container .content ul li {
+  position: relative;
+}
+
+.container .content ul li::after {
+  transition: 0.3s all linear;
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 50%;
+  height: 2px;
+  width: 0%;
+  background-color: #d5d9db;
+  border-radius: 50px;
+}
+
+.container .content ul li:hover::after {
+  width: 100%;
+  right: 0px;
+  background-color: #fff;
+}
+
+.container .content ul a {
+  color: #d5d9db;
+  transition: 0.3s;
+}
+
+.container .content ul a:hover {
+  color: #ffffff;
+}
+
+.container .content .iconNav {
+  display: flex;
+  gap: 25px;
+  font-size: 28px;
+  position: relative;
+}
+
+.container .content .iconNav i {
+  color: #d5d9db;
+  transition: 0.3s;
+}
+
+.container .content .iconNav i:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  nav .container .content .iconNav {
+    display: none;
+  }
+}
+
+nav .container .content .faBars {
+  cursor: pointer;
+  display: none;
+  line-height: 87px;
+  margin-top: 3px;
+}
+
+nav .container .content .faBars i {
+  font-size: 25px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  nav .container .content ul,
+  nav .container .content .iconNav {
+    display: none;
+  }
+
+  nav .container .content .faBars {
+    display: inline-block;
+    transition: 0.5s;
+    color: #d5d9db;
+  }
+
+  nav .container .content .faBars:hover {
+    color: #fff;
+  }
+}
+
+/* Stary togelNav */
+.togelNav {
+  background-image: url(../images/footer-bg.jpg);
+  padding: 30px 0px;
+  text-align: center;
+  line-height: 40px;
+  display: none;
+  position: relative;
+}
+
+.togelNav i {
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  right: 40px;
+  color: #d5d9db;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.togelNav i:hover {
+  color: #fff;
+}
+
+.togelNav ul {
+  padding: 40px;
+  align-items: center;
+  display: inline-block;
+}
+
+.togelNav ul li {
+  position: relative;
+}
+
+.togelNav ul li a {
+  color: #d5d9db;
+  transition: 0.3s;
+}
+
+.togelNav ul li a:hover {
+  color: #fff;
+}
+
+.togelNav ul li::after {
+  transition: 0.3s all linear;
+  content: "";
+  position: absolute;
+  top: 32px;
+  right: 50%;
+  height: 2px;
+  width: 0%;
+  background-color: #d5d9db;
+  border-radius: 50px;
+}
+
+.togelNav ul li:hover::after {
+  width: 100%;
+  right: 0px;
+  color: #fff;
+}
+/* End togelNav */
+
+/* End nav */
+/* Start slider */
+.sliders {
+  background-color: #e6e6e6;
+  padding: 40px 0px;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #333;
+  transition: 0.5s;
+  width: 30px;
+}
+
+.carousel .carousel-inner .item img {
+  background-size: cover !important;
+  width: 100% !important;
+  height: 600px !important;
+  border-radius: 15px !important;
+}
+
+.carousel .carousel-control {
+  border-radius: 15px !important;
+}
+
+/* End slider */
+/* End hedar */
+/* *********************** */
+
+/* Start main */
+/* Start section products */
+.products {
+  padding: 50px 0px;
+}
+
+.products h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.products .content .boxs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  gap: 25px;
+  justify-content: center;
+}
+
+.products .content .boxs .box {
+  padding: 15px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.products .content .boxs .box:hover {
+  transform: translatey(-1px);
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.2);
+}
+
+.products .content .boxs .box img {
+  width: 280px;
+  height: 220px;
+  border-radius: 5px;
+}
+
+.products .content .boxs .box .product {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.products .content .boxs .box .product span {
+  color: #7f999a;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.products .content .boxs .box form input {
+  border-radius: 5px;
+  padding: 2px 8px;
+  border: 0px;
+  width: 200px;
+  height: 30px;
+}
+
+.products .content .boxs .box form a {
+  color: #fff;
+  background-color: #7f999a;
+  border-radius: 5px;
+  padding: 5px 20px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+.products .content .boxs .box > a {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #7f999a;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.products .content .boxs .box a:hover {
+  background-color: #738b8c;
+}
+
+/* End section products */
+
+/* Start requests */
+.requests {
+  padding: 100px 0px;
+  background-color: #f0f0f0;
+}
+
+.requests .request {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.requests .request h1 {
+  font-size: 32px;
+}
+
+.requests .boxs {
+  display: flex;
+  gap: 35px;
+}
+
+.requests .boxs .box {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 365px;
+  transition: 0.3s;
+}
+
+.requests .boxs .box .ico {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.requests .boxs .box .ico i {
+  font-size: 38px;
+  text-align: center;
+  color: #fff;
+  background-color: #7f999a;
+  padding: 8px 19px;
+  border-radius: 50px;
+}
+
+.requests .boxs .box .ico h1 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.requests .boxs .box .ico p {
+  font-size: 15px;
+}
+
+.requests .boxs .box h1 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.requests .boxs .box ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+
+.requests .boxs .box ul span {
+  color: #7f999a;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.requests .boxs .box a {
+  display: block;
+  text-align: center;
+  background-color: #7f999a;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.requests .boxs .box a:hover {
+  background-color: #738b8c;
+}
+
+.requests .boxs .box:hover {
+  transform: translatey(-1px);
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .requests .request h1 {
+    font-size: 26px;
+  }
+
+  .requests .boxs {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .requests .boxs .box {
+    padding: 18px;
+    width: 320px;
+  }
+
+  .requests .boxs .box .ico {
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .requests .boxs .box .ico h1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .requests .boxs .box .ico p {
+    font-size: 15px;
+  }
+
+  .requests .boxs .box h1 {
+    font-size: 15px;
+  }
+}
+
+/* End requests */
+
+/* End main */
+/* *********************** */
+
+/* Start footer */
+/* Start section Connect us */
+
+.ConnectUs {
+  background-size: cover;
+}
+
+.ConnectUs .content {
+  display: flex;
+  gap: 50px;
+  padding: 100px 0px;
+  color: #fff;
+}
+
+.ConnectUs .content .connect img {
+  width: 125px;
+  height: 75px;
+}
+
+.ConnectUs .content .connect p {
+  margin-top: 20px;
+  font-size: 15px;
+  display: flex;
+  gap: 12px;
+  color: rgb(200, 200, 200);
+}
+
+.ConnectUs .content .connect a {
+  margin-top: 20px;
+  font-size: 15px;
+  display: flex;
+  gap: 12px;
+  color: rgb(200, 200, 200);
+  transition: 0.3s;
+}
+
+.ConnectUs .content .connect a:hover {
+  color: #fff;
+}
+
+.ConnectUs .content .links h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.ConnectUs .content .links a {
+  margin-top: 10px;
+  font-size: 15px;
+  display: block;
+  color: rgb(200, 200, 200);
+  transition: 0.3s;
+}
+
+.ConnectUs .content .links a:hover {
+  color: #fff;
+}
+
+.ConnectUs .content .around h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.ConnectUs .content .around p {
+  color: rgb(200, 200, 200);
+  width: 250px;
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+  .ConnectUs .content {
+    flex-direction: column;
+    margin-right: 40px;
+  }
+
+  .ConnectUs .content h5 {
+    font-size: 18px;
+  }
+
+  .ConnectUs .content .links h5 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .ConnectUs .content .around h5 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .ConnectUs .content .connect p,
+  .ConnectUs .content .connect a,
+  .ConnectUs .content .linka a,
+  .ConnectUs .content .around p {
+    font-size: 13px;
+  }
+}
+/* end section Connect us */
+
+footer {
+  background-color: #252525;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 0px 4px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  padding: 10px 0px;
+  display: inline-block;
+  font-size: 15px;
+  color: rgb(200, 200, 200);
+}
+
+footer a {
+  font-size: 15px;
+  color: rgb(200, 200, 200);
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+/* End footer */
+/* *********************** */
+/* End body */
+
+
