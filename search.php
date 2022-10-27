@@ -7,7 +7,7 @@ if (isset($_POST['query'])) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {
             $output .=
-            "<div class='box'><img src='uploaded_img/".
+            "<div class='box'><img src='admin/uploaded_img/".
             $row['image'].
             "' alt=''><div class='product'><p>اسم المنتج: <span>".
             $row['name'].
